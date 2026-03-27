@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -408,4 +409,416 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Renata Andrade | Harmonização Orofacial e Odontologia Estética</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            offwhite: '#FAF9F6', // Fundo principal
+                            nude: '#F5EFE6', // Fundo alternativo
+                            gold: '#C5A059', // Dourado principal
+                            goldlight: '#D4AF37', // Dourado mais claro/champagne
+                            dark: '#1A1A1A', // Texto escuro
+                            gray: '#333333', // Texto auxiliar
+                            footer: '#111827' // Cor do footer
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            /* --- EDITAR AQUI O LINK DO WHATSAPP (PARA BOTÕES E ÍCONE FLUTUANTE) --- */
+            --whatsapp-link: 'https://wa.me/5531999999999';
+            /* -------------------------------------------------------------------- */
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body { background-color: #FAF9F6; color: #333333; }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(250, 249, 246, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+        }
+
+        /* Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Image Overlay */
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(250, 249, 246, 0.95) 0%, rgba(250, 249, 246, 0.7) 50%, rgba(250, 249, 246, 0.3) 100%), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+    <nav class="fixed w-full z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-gem text-brand-gold text-2xl"></i>
+                    <span class="font-serif font-semibold text-xl text-brand-dark tracking-wide">Dra. Renata Andrade</span>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#sobre" class="text-brand-gray hover:text-brand-gold transition duration-300 text-sm tracking-widest uppercase">Sobre</a>
+                    <a href="#servicos" class="text-brand-gray hover:text-brand-gold transition duration-300 text-sm tracking-widest uppercase">Serviços</a>
+                    <a href="#resultados" class="text-brand-gray hover:text-brand-gold transition duration-300 text-sm tracking-widest uppercase">Resultados</a>
+                    <a href="#agendamento" class="bg-brand-dark text-white px-6 py-2 rounded-lg hover:bg-brand-gold transition duration-300 text-sm uppercase tracking-wider">Agendar</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-offwhite border-t border-gray-200">
+            <div class="px-2 pt-2 pb-6 space-y-1 sm:px-3 text-center">
+                <a href="#sobre" class="block px-3 py-3 text-brand-gray hover:text-brand-gold uppercase tracking-widest text-sm">Sobre</a>
+                <a href="#servicos" class="block px-3 py-3 text-brand-gray hover:text-brand-gold uppercase tracking-widest text-sm">Serviços</a>
+                <a href="#resultados" class="block px-3 py-3 text-brand-gray hover:text-brand-gold uppercase tracking-widest text-sm">Resultados</a>
+                <a href="#agendamento" class="block mt-4 mx-4 bg-brand-gold text-white px-4 py-3 rounded-lg uppercase tracking-widest text-sm font-medium">Agendar</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <span class="text-brand-gold font-medium tracking-widest uppercase text-sm mb-4 block">Beleza em sua melhor versão</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif text-brand-dark leading-tight mb-6">
+                    Odontologia Estética e Harmonização Orofacial Humanizada
+                </h1>
+                <p class="text-lg md:text-xl text-brand-gray mb-10 font-light leading-relaxed">
+                    Realce sua beleza com exclusividade em Ipatinga/MG. Naturalidade não significa ausência de mudança, mas sim a revelação da sua melhor essência.
+                </p>
+                <a href="#agendamento" class="inline-block bg-brand-gold text-white font-medium px-8 py-4 rounded-xl hover:bg-brand-dark transition-colors duration-300 shadow-lg shadow-brand-gold/30">
+                    Agendar Avaliação Exclusiva
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="text-center fade-in">
+                    <div class="w-16 h-16 mx-auto bg-brand-offwhite rounded-full flex items-center justify-center mb-6 shadow-sm text-brand-gold">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Protocolos Seguros</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Técnicas avançadas e produtos premium reconhecidos mundialmente para garantir a sua saúde e resultados duradouros.
+                    </p>
+                </div>
+
+                <div class="text-center fade-in" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 mx-auto bg-brand-offwhite rounded-full flex items-center justify-center mb-6 shadow-sm text-brand-gold">
+                        <i class="fa-solid fa-hands-holding-circle text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Cuidado Humanizado</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Atendimento acolhedor e personalizado. Entendemos seus desejos para propor um plano de tratamento exclusivo e respeitoso.
+                    </p>
+                </div>
+
+                <div class="text-center fade-in" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 mx-auto bg-brand-offwhite rounded-full flex items-center justify-center mb-6 shadow-sm text-brand-gold">
+                        <i class="fa-solid fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-xl text-brand-dark mb-3">Resultados Naturais</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        O foco é o equilíbrio e a proporção. Realçamos seus traços de forma elegante, preservando a identidade do seu rosto.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-brand-offwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="relative aspect-[3/4] rounded-2xl group">
+                        <div class="absolute inset-0 border-2 border-brand-gold rounded-2xl transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300"></div>
+                        <img src="img/renataandrade3.webp" alt="Dra. Renata Andrade" class="w-full h-full object-cover rounded-2xl shadow-xl">
+                    </div>
+                </div>
+                
+                <div class="w-full lg:w-1/2 fade-in">
+                    <span class="text-brand-gold font-medium tracking-widest uppercase text-sm mb-4 block">Autoridade Clínica</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-brand-dark mb-6 leading-tight">
+                        Dra. Renata Andrade
+                    </h2>
+                    <h4 class="text-lg text-brand-gray mb-6 font-medium">Cirurgiã-Dentista Especialista</h4>
+                    <div class="space-y-4 text-brand-gray font-light leading-relaxed">
+                        <p>
+                            Movida pela paixão de transformar sorrisos e vidas, dedico minha trajetória à Odontologia Estética e à Harmonização Orofacial com um olhar voltado para a essência de cada paciente.
+                        </p>
+                        <p>
+                            Minha filosofia clínica baseia-se na entrega de resultados de altíssimo padrão, onde a naturalidade e a elegância são inegociáveis. Não busco transformar rostos, mas resgatar a autoestima e iluminar o que você já tem de mais belo.
+                        </p>
+                        <p>
+                            Em meu consultório em Ipatinga, você encontrará um ambiente pensado em cada detalhe para proporcionar segurança, conforto e uma experiência estética verdadeiramente premium.
+                        </p>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-brand-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-brand-gold font-medium tracking-widest uppercase text-sm mb-4 block">Especialidades</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-brand-dark">Procedimentos Exclusivos</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 fade-in group cursor-default">
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-syringe text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-brand-dark mb-3 font-semibold">Harmonização Orofacial</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Equilíbrio das proporções faciais através de preenchedores de ácido hialurônico e bioestimuladores de colágeno.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 fade-in group cursor-default" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-droplet text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-brand-dark mb-3 font-semibold">Preenchimento Labial</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Desenho, hidratação e volume sutil para lábios elegantes, contornados e extremamente naturais.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 fade-in group cursor-default" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                        <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-brand-dark mb-3 font-semibold">Toxina Botulínica</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Prevenção e suavização de rugas e lines de expressão, mantendo a leveza e os movimentos do rosto.
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 fade-in group cursor-default" style="transition-delay: 300ms;">
+                    <div class="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6 text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                        <i class="fa-regular fa-face-smile text-xl"></i>
+                    </div>
+                    <h3 class="font-serif text-lg text-brand-dark mb-3 font-semibold">Odontologia Estética</h3>
+                    <p class="text-brand-gray font-light text-sm leading-relaxed">
+                        Facetas, clareamento e reabilitação oral focada em construir sorrisos alinhados, claros e saudáveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="py-24 bg-brand-offwhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-brand-gold font-medium tracking-widest uppercase text-sm mb-4 block">Portfólio</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-brand-dark">A Beleza Revelada</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl fade-in">
+                    <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=600" alt="Resultado Preenchimento Labial" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-serif text-lg">Preenchimento Labial</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl fade-in" style="transition-delay: 100ms;">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600" alt="Resultado Harmonização Facial" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-serif text-lg">Harmonização Facial</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl fade-in" style="transition-delay: 200ms;">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=600" alt="Resultado Odontologia Estética" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                        <span class="text-white font-serif text-lg">Odontologia Estética</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendamento" class="py-24 bg-brand-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center fade-in">
+                <h2 class="text-4xl md:text-5xl font-serif text-brand-dark leading-tight mb-6">
+                    Pronta para revelar sua melhor essência?
+                </h2>
+                <p class="text-lg text-brand-gray mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+                    Os horários para atendimento exclusivo e humanizado são limitados. Realce sua beleza e resgate sua autoestima agora.
+                </p>
+                <a href="https://wa.me/5531999999999" target="_blank" class="inline-block bg-brand-gold text-white font-medium px-10 py-5 rounded-xl hover:bg-brand-dark transition-colors duration-300 shadow-lg shadow-brand-gold/30 uppercase tracking-widest text-sm">
+                    Agendar Minha Avaliação Exclusiva
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-brand-footer text-brand-offwhite pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-gem text-brand-gold text-2xl"></i>
+                        <span class="font-serif font-semibold text-xl tracking-wide text-brand-offwhite">Dra. Renata Andrade</span>
+                    </div>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-8 w-11/12">
+                        Harmonização Orofacial e Odontologia Estética Humanizada. Sua saúde, beleza e autoestima tratadas com a seriedade e o requinte que você merece.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/dra.renataandradem" target="_blank" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition duration-300">
+                            <i class="fa-brands fa-instagram text-brand-offwhite"></i>
+                        </a>
+                        <a href="https://wa.me/5531999999999" target="_blank" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition duration-300">
+                            <i class="fa-brands fa-whatsapp text-brand-offwhite"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg mb-6 text-brand-gold">Fale Conosco</h4>
+                    <ul class="space-y-5 text-gray-400 font-light text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-gold"></i>
+                            <span>Av. Exemplo, 123 - Sala 45<br>Bairro Nobre, Ipatinga - MG</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-gold"></i>
+                            <span>(31) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-gold"></i>
+                            <span>contato@drarenataandrade.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:text-right">
+                    <p class="text-gray-400 font-medium text-lg mb-6">Pronto para cuidar da sua saúde?</p>
+                    <a href="https://wa.me/5531999999999" target="_blank" class="inline-block bg-brand-gold text-brand-dark font-medium px-8 py-4 rounded-xl hover:bg-brand-offwhite transition duration-300 shadow-md">
+                        Fale conosco no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm font-light">
+                <p>&copy; 2026 Dra. Renata Andrade. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5531999999999" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl hover:scale-110 transition-transform duration-300 z-50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Animação de Fade-in com Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Anima apenas uma vez
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+
+        // Efeito de sombra na Navbar ao rolar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+>>>>>>> 149defa (first commit)
 </html>
